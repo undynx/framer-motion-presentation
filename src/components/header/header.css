@@ -1,0 +1,16 @@
+.headerContainer {
+    background-color: #9e8fc7;
+    padding: 20px;
+}
+
+.menuButton {
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    padding: 2px 5px;
+}
+
+.menuIcon {
+    width: 30px;
+}

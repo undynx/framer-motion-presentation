@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Header } from './components/header/header';
 import { SideMenu } from './components/side-menu/side-menu';
 import { Modal } from './components/modal/modal';
+import { Accordion } from './components/accordion/accordion';
 
 import img1 from './assets/images/black.png';
 import img2 from './assets/images/blue.png';
@@ -18,6 +19,8 @@ function App() {
     <div>
       <Header onClose={() => setMenuOpen((state) => !state)} />
       <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen((state) => !state)} />
+
+      <Accordion />
 
       <div className="cardsContainer">
         <button className="card" onClick={() => setModalOpen(true)}><img src={img1} alt='text' className="img" /></button>

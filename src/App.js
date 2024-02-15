@@ -20,6 +20,17 @@ function App() {
       <Header onClose={() => setMenuOpen((state) => !state)} />
       <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen((state) => !state)} />
 
+      <div className="sliderContainer">
+        <h2>
+          Un título!!
+        </h2>
+        <input
+          type="range"
+          min="-100"
+          max="100"
+        />
+      </div>
+
       <Accordion />
 
       <div className="cardsContainer">

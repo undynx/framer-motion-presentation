@@ -40,7 +40,7 @@ function App() {
         <button className="card" onClick={() => setModalOpen(true)}><img src={img4} alt='text' className="img" /></button>
       </div>
 
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen((state) => !state)} />
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

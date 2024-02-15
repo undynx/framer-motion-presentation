@@ -5,22 +5,22 @@ import { ReactComponent as CloseSVG } from '../../assets/icons/close.svg';
 import './modal.css';
 
 const Modal = ({ isOpen, onClose }) => {
-  if (isOpen) {
-    return (
-        <>
-            <button className="overlay" onClick={onClose} />
-            <div className="modal">
-                <button className="closeButton" onClick={onClose}><CloseSVG className="closeSVG" /></button>
-                <div className="modalContent">
-                    <h3>Modal</h3>
-                    <img src={gif} alt="chipichipi" />
-                </div>
+  return (
+    <>
+      {isOpen && (
+        <div>
+          <button className="overlay" onClick={onClose} />
+          <div className="modal">
+            <button className="closeButton" onClick={onClose}><CloseSVG className="closeSVG" /></button>
+            <div className="modalContent">
+              <h3>Modal</h3>
+              <img src={gif} alt="chipichipi" />
             </div>
-        </>
-      )
-  }
-
-  return null;
+          </div>
+        </div>
+      )}
+    </>
+  )
 }
 
 export { Modal };

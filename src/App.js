@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion'
 
 import { Header } from './components/header/header';
 import { SideMenu } from './components/side-menu/side-menu';
@@ -14,11 +15,27 @@ import './App.css';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [value, setValue] = useState(0);
 
   return (
     <div>
       <Header onClose={() => setMenuOpen((state) => !state)} />
       <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen((state) => !state)} />
+
+      <div className="sliderContainer">
+        <motion.h2
+          animate={{ x: `${value}px` }}
+        >
+          Un título!!
+        </motion.h2>
+        <input
+          type="range"
+          min="-100"
+          max="100"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+      </div>
 
       <Accordion />
 
